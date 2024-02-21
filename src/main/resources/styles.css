@@ -1,0 +1,18 @@
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-background-color: #4CAF50; /* couleur de fond */
+    -fx-text-fill: white; /* couleur du texte */
+    -fx-font-size: 14px;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+}
+.root {
+    -fx-background-color: #BB9B95; /* Couleur de fond de l'interface */
+}
