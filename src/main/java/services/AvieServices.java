@@ -29,8 +29,29 @@ public AvieServices(){}
 
 
 
+    public void supprimer(Avie avie) throws SQLException {
+        // Connexion à la base de données choubikloubiki
+        Connection conn = MyDataBase.getConnection(); // Remplacez Database.getConnectionChoubikloubiki() par la méthode appropriée pour obtenir une connexion à votre base de données choubikloubiki
+        PreparedStatement stmt = null;
 
+        try {
+            // Requête SQL pour supprimer l'avis
+            String sql = "DELETE FROM avie WHERE id = ?";
+            stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, avie.getId()); // Remplacez getId() par la méthode appropriée pour obtenir l'ID de l'avis
 
+            // Exécuter la requête
+            stmt.executeUpdate();
+        } finally {
+            // Fermeture des ressources
+            if (stmt != null) {
+                stmt.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        }
+    }
 
     @Override
 
@@ -40,6 +61,9 @@ public AvieServices(){}
             preparedStatement.setInt(1, id);
             preparedStatement.executeUpdate();
         }
+
+
+
 
 
     @Override

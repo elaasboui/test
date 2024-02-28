@@ -5,10 +5,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainFX extends Application {
+public class  MainFX extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/accueil.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/listReponse.fxml"));
          Parent root =loader.load();
 
         // Chargement du fichier CSS

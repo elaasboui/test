@@ -1,5 +1,7 @@
 package models;
 
+import javafx.beans.value.ObservableValue;
+
 public class Avie {
     private int id;
 
@@ -44,5 +46,6 @@ public class Avie {
     public void setEtoile(float etoile) {
         this.etoile = etoile;
     }
+
 
 }

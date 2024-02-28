@@ -14,8 +14,6 @@ public class AjouterReclamationController {
     ReclamationServices rs = new ReclamationServices();
 
 
-    @FXML
-    private TextField ep;
 
     @FXML
     private TextField idp;
@@ -30,17 +28,70 @@ public class AjouterReclamationController {
     void AjouterReclamation(ActionEvent event) {
 
     }
+    @FXML
     public void AjouterReclamation(javafx.event.ActionEvent actionEvent) {
         try {
-            rs.ajouter(new Reclamation( idp.getText(),Float.parseFloat(ep.getText()),Integer.parseInt(np.getText()) ,ip.getText() ));
+            // Vérification des saisies
+            if (!validateInputs()) {
+                return;
+            }
+            rs.ajouter(new Reclamation(idp.getText(), Integer.parseInt(np.getText()), ip.getText()));
         } catch (SQLException e) {
+            showAlert("Erreur", e.getMessage());
+        }
+    }
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
+    // Méthode pour valider les saisies
+    private boolean validateInputs() {
+        // Vérification du champ description (String)
 
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+        if (idp.getText() == null || idp.getText().trim().isEmpty()) {
+            showAlert("Erreur de saisie", "Le champ Description ne peut pas être vide");
+            return false;
+        }
+        if (!isValidString(idp.getText())) {
+            showAlert("Erreur de saisie", "Le champ Description doit être une chaîne de caractères");
+            return false;
+        }
 
-            alert.setTitle("Erroe");
-            alert.setContentText(e.getMessage());
-            Optional<ButtonType> buttonType = alert.showAndWait();
+        // Vérification du champ nombreReclamation (int)
+        String nombreReclamationText = np.getText();
+        if (nombreReclamationText == null || nombreReclamationText.trim().isEmpty()) {
+            showAlert("Erreur de saisie", "Le champ Nombre de Réclamation ne peut pas être vide");
+            return false;
+        }
+        if (!isValidInteger(nombreReclamationText)) {
+            showAlert("Erreur de saisie", "Le champ Nombre de Réclamation doit être un entier");
+            return false;
+        }
 
+        // Vérification du champ image (String)
+        if (ip.getText() == null || ip.getText().trim().isEmpty()) {
+            showAlert("Erreur de saisie", "Le champ Image ne peut pas être vide");
+            return false;
+        }
+        if (!isValidString(ip.getText())) {
+            showAlert("Erreur de saisie", "Le Image doit être une chaîne de caractères");
+            return false;
+        }
+        return true;
+    }
+    private boolean isValidString(String str) {
+        return str.matches("[a-zA-Z]+"); // Vérifie si la chaîne ne contient que des lettres
+    }
+
+    // Méthode pour vérifier si une chaîne peut être convertie en entier
+    private boolean isValidInteger(String str) {
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
         }
     }
 

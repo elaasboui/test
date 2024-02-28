@@ -1,18 +1,31 @@
-.label {
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #333333;
-}
-
+/* Style de base pour les boutons */
 .button {
-    -fx-background-color: #4CAF50; /* couleur de fond */
-    -fx-text-fill: white; /* couleur du texte */
-    -fx-font-size: 14px;
+    -fx-background-color: #000000; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-pref-width: 150px; /* Largeur préférée */
+    -fx-pref-height: 40px; /* Hauteur préférée */
+    -fx-cursor: hand; /* Curseur de la souris */
 }
 
-.text-field {
-    -fx-font-size: 14px;
+/* Style pour les boutons lorsqu'ils sont survolés */
+.button:hover {
+    -fx-background-color: #45a049; /* Couleur de fond */
 }
-.root {
-    -fx-background-color: #BB9B95; /* Couleur de fond de l'interface */
+
+/* Style pour les boutons lorsqu'ils sont pressés */
+.button:pressed {
+    -fx-background-color: #3e8e41; /* Couleur de fond */
+}
+
+/* Style pour les boutons lorsqu'ils sont désactivés */
+.button:disabled {
+    -fx-opacity: 0.5; /* Opacité réduite */
+    -fx-cursor: default; /* Curseur par défaut */
+}
+
+/* Style pour les images */
+.image-view {
+    -fx-fit-width: 100px; /* Largeur de l'image */
+    -fx-fit-height: 100px; /* Hauteur de l'image */
 }
