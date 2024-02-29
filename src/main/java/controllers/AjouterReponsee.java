@@ -43,7 +43,7 @@ public class AjouterReponsee implements Initializable {
             alert.setTitle("Success");
             alert.setContentText("Une réponse a été ajouté avec succées");
             Optional<ButtonType> buttonType = alert.showAndWait();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/accueil.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/listReponse.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();

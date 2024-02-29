@@ -8,18 +8,26 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReponsee">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReponsee">
    <children>
-      <TextField fx:id="dp" layoutX="22.0" layoutY="181.0" prefHeight="87.0" prefWidth="294.0" />
-      <Button layoutX="223.0" layoutY="312.0" mnemonicParsing="false" onAction="#AjouterReponsee" prefHeight="47.0" prefWidth="85.0" text="Ajouter" />
-      <Text layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RÉPONSE:">
+      <TextField fx:id="dp" layoutX="86.0" layoutY="182.0" prefHeight="87.0" prefWidth="294.0" />
+      <Button layoutX="367.0" layoutY="290.0" mnemonicParsing="false" onAction="#AjouterReponsee" prefHeight="31.0" prefWidth="99.0" text="Ajouter" textFill="#0d11d0" />
+      <Text fill="#2246c9" layoutX="14.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RÉPONSE:">
          <font>
             <Font name="Gabriola" size="47.0" />
          </font>
       </Text>
-      <ComboBox fx:id="reccombobox" layoutX="148.0" layoutY="111.0" prefWidth="150.0" />
+      <ComboBox fx:id="reccombobox" layoutX="158.0" layoutY="111.0" prefWidth="150.0" />
       <Label text="Label" />
-      <Label layoutX="53.0" layoutY="115.0" text="Réclamation" />
+      <Label layoutX="22.0" layoutY="115.0" text="Choisir La Réclamation" textFill="#2f23d3">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Label>
+      <Text fill="#3b2ad3" layoutX="15.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENTRE VOTRE REPONSE :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
 
    </children>
 </AnchorPane>

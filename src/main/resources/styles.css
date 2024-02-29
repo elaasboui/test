@@ -1,6 +1,6 @@
 /* Style de base pour les boutons */
 .button {
-    -fx-background-color: #000000; /* Couleur de fond */
+    -fx-background-color: #1A135B; /* Couleur de fond */
     -fx-text-fill: white; /* Couleur du texte */
     -fx-font-size: 14px; /* Taille de la police */
     -fx-pref-width: 150px; /* Largeur préférée */

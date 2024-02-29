@@ -9,30 +9,36 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Accueil">
    <children>
-      <Button fx:id="buttonajouteravis" layoutX="42.0" layoutY="158.0" mnemonicParsing="false" onAction="#handleAjouterAvis" prefHeight="51.0" prefWidth="241.0" text="Ajouter Avis" textFill="#543838">
+      <Button fx:id="buttonajouteravis" layoutX="59.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleAjouterAvis" prefHeight="51.0" prefWidth="241.0" text="Ajouter Avis" textFill="#1a5eb2">
          <font>
-            <Font name="Comic Sans MS" size="24.0" />
+            <Font name="Comic Sans MS Bold" size="25.0" />
          </font></Button>
-      <Text fill="#070303" layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vue d'ensemble des Évaluations" wrappingWidth="356.28759765625">
+      <Text fill="#2a2e80" layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vue d'ensemble des Évaluations" wrappingWidth="379.28759765625">
          <font>
-            <Font name="Franklin Gothic Medium Italic" size="27.0" />
+            <Font name="Ink Free" size="27.0" />
          </font>
       </Text>
 
       <AnchorPane stylesheets="@styles.css">
          <!-- Contenu de votre fichier FXML -->
       </AnchorPane>
-      <Button fx:id="buttonmodifieravis" layoutX="42.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleModifierAvis" prefHeight="51.0" prefWidth="241.0" text="Modifier Avis" textFill="#543838">
+      <Button fx:id="buttonmodifieravis" layoutX="63.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleModifierAvis" prefHeight="51.0" prefWidth="241.0" text="Modifier Avis" textFill="#0061a1">
          <font>
-            <Font name="Comic Sans MS" size="24.0" />
+            <Font name="Comic Sans MS Bold" size="23.0" />
          </font>
       </Button>
-      <ImageView fx:id="myImageView" fitHeight="332.0" fitWidth="255.0" layoutX="321.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="buttonafficheravis" layoutX="42.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleAfficherAvis" prefHeight="57.0" prefWidth="241.0" text="Afficher Avis">
+      <ImageView fx:id="myImageView" fitHeight="166.0" fitWidth="241.0" layoutX="328.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="buttonafficheravis" layoutX="59.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleAfficherAvis" prefHeight="57.0" prefWidth="241.0" text="Afficher Avis" textFill="#3d3dbc">
          <font>
-            <Font name="Comic Sans MS" size="24.0" />
+            <Font name="Comic Sans MS Bold" size="25.0" />
          </font>
       </Button>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1a448" height="89.0" layoutY="-37.0" stroke="#bf5b0a" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c0c43" height="89.0" layoutY="-44.0" stroke="#bf5b0a" strokeType="INSIDE" width="600.0" />
+      <Text fill="#2d2880" layoutX="14.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous Pouvez :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="6.0" layoutY="8.0" mnemonicParsing="false" onAction="#retourPagePrecedente" prefHeight="25.0" prefWidth="53.0" text="Retour" />
    </children>
 </AnchorPane>

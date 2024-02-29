@@ -58,13 +58,13 @@ public class AjouterAvieController {
     private boolean validateInputs() {
         // Vérification du champ dp (String)
         if (dp.getText() == null || dp.getText().trim().isEmpty()) {
-            showAlert("Erreur de saisie", "Le champ DP ne peut pas être vide");
+            showAlert("Erreur de saisie", "Le champ de description ne peut pas être vide");
             return false;
         }
         // Vérification du champ ep (float)
         String epText = ep.getText();
         if (epText == null || epText.trim().isEmpty()) {
-            showAlert("Erreur de saisie", "Le champ EP ne peut pas être vide");
+            showAlert("Erreur de saisie", "Le champ Etoile ne peut pas être vide");
             return false;
         }
         if (!isValidFloat(epText)) {
@@ -80,6 +80,7 @@ public class AjouterAvieController {
         alert.setTitle(title);
         alert.setContentText(content);
         alert.showAndWait();
+
     }
 
     // Méthode pour vérifier si une chaîne peut être convertie en float

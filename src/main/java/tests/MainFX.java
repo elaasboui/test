@@ -12,10 +12,10 @@ public class  MainFX extends Application {
          Parent root =loader.load();
 
         // Chargement du fichier CSS
-        Scene scene = new Scene(root, 600, 500);
+        Scene scene = new Scene(root, 800, 450);
         scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
 
-        primaryStage.setTitle("Gérer Avis");
+        primaryStage.setTitle("Gérer Votre Avis ou Reclamation");
         primaryStage.setScene(scene);
         primaryStage.show();
     }

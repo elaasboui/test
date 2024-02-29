@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Accueil2">
+   <children>
+      <Button fx:id="buttonajouterreclamation" layoutX="112.0" layoutY="159.0" mnemonicParsing="false" onAction="#handleajouterreclamation" prefHeight="37.0" prefWidth="134.0" text="AJOUTER" textFill="#2d0eda">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonmodifierreclamation" layoutX="112.0" layoutY="214.0" mnemonicParsing="false" onAction="#handlemodifierreclamation" prefHeight="38.0" prefWidth="134.0" text="MODIFIER" textFill="#360ccd">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonafficherreclamation" layoutX="112.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleafficherreclamation" prefHeight="38.0" prefWidth="134.0" text="AFFICHAGE" textFill="#1c10c3">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="myImageView" fitHeight="150.0" fitWidth="256.0" layoutX="300.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fill="#060636" layoutX="35.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous êtes ici chez Nous" wrappingWidth="320.5880126953125">
+         <font>
+            <Font name="Ink Free" size="29.0" />
+         </font>
+      </Text>
+      <Text fill="#0a0a75" layoutX="35.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous Pouvez :" wrappingWidth="127.6171875">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button layoutX="9.0" layoutY="354.0" mnemonicParsing="false" onAction="#retourPagePrecedente" text="Retour" />
+   </children>
+</AnchorPane>
